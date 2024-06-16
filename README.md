@@ -74,9 +74,42 @@ Result: The optimal number of principal components is found, which represents th
 Based on the figure above, we can determine the optimal number of Principal Components is 5. This is the point at which the curve begins to flatten (elbow). After this point, adding more Principal Components does not contribute too much to increasing the explained variance ratio.
 
 3. **Question 3**: Compare the performance of **4** different classification algorithms (3 machine learning and 1 MLP models) in both formats above. (4 points)
+#### Original data
+#### Confusion matrix
+![image](https://github.com/Khatran05082003/Fundamental-ML/assets/102920168/115189da-3492-41f3-a663-b38c871ba225)
+![image](https://github.com/Khatran05082003/Fundamental-ML/assets/102920168/329c54d6-46f7-47c2-ab38-4aa07cd377a5)
+![image](https://github.com/Khatran05082003/Fundamental-ML/assets/102920168/11804c5e-b012-4819-af33-8367a1fc58d1)
+![image](https://github.com/Khatran05082003/Fundamental-ML/assets/102920168/9560f0df-1331-4d46-827d-614ca2ca855d)
+
+#### Classification report
+Linear Logistic
+![image](https://github.com/Khatran05082003/Fundamental-ML/assets/102920168/7f71b4a8-1ba5-4a95-aa59-76a9e3181714)
+SVM
+![image](https://github.com/Khatran05082003/Fundamental-ML/assets/102920168/7fc0a4cc-720c-4a67-8e60-34eaf82dc9c5)
+Naive Bayes
+![image](https://github.com/Khatran05082003/Fundamental-ML/assets/102920168/8259b41c-14f3-4028-80f6-7a7722f4ea6e)
+MLP
+![image](https://github.com/Khatran05082003/Fundamental-ML/assets/102920168/a940303e-5112-4b8e-9840-422134e0d885)
 
 
+#### Transformed data
+#### Confusion matrix
+![image](https://github.com/Khatran05082003/Fundamental-ML/assets/102920168/a0c7e54d-2e82-409c-bbc6-e8fefd014af1)
+![image](https://github.com/Khatran05082003/Fundamental-ML/assets/102920168/f17835c9-1f2f-4df8-92d0-0aaed5272d21)
+![image](https://github.com/Khatran05082003/Fundamental-ML/assets/102920168/0b9c96d4-409e-4e8e-b4ef-7e96a6024b33)
+![image](https://github.com/Khatran05082003/Fundamental-ML/assets/102920168/77d9294c-4ae5-4f2a-b8be-7461777b4052)
+#### Classification report
+Linear Logistic
+![image](https://github.com/Khatran05082003/Fundamental-ML/assets/102920168/92891b35-d512-47f5-b00a-7a304c70b5d4)
 
+SVM
+![image](https://github.com/Khatran05082003/Fundamental-ML/assets/102920168/531eebdd-93cc-46d0-903d-cf7ab9c0873f)
+
+Naive Bayes
+![image](https://github.com/Khatran05082003/Fundamental-ML/assets/102920168/16617d65-1c87-4643-b546-7fdab2cb3cfc)
+
+MLP
+![image](https://github.com/Khatran05082003/Fundamental-ML/assets/102920168/dbf05c7e-c632-4d9e-b4f0-62e97993517a)
 
 4. **Question 4**: Perform hyperparameter tuning using ```GridSearchCV``` for each classification method. (1 point)
 
