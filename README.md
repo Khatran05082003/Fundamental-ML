@@ -42,3 +42,64 @@ This project is designed to be completed in the following steps:
 
 
 Feel free to modify and extend the notebook to explore further aspects of the data and experiment with different algorithms. Good luck.
+
+
+1. **Question 1**: Can you visualize the data projected onto two principal components? (2 points)
+
+![alt text](image.png)
+
+2. **Question 2**: How to determine the optimal number of principal components using ```pca.explained_variance_```? Explain your selection process.
+
+The selection process:
+
+Eigenvalues Calculation: For each number of PCs (from 1 to 20), PCA is performed on the data, and the eigenvalues are calculated. These eigenvalues represent the amount of variance captured by each principal component.
+
+Storing Last Eigenvalue: The last eigenvalue for each number of PCs is stored in a dictionary. Because when increasing the number of PCs, each additional PC will capture less variance.
+
+Plotting Eigenvalues: A plot is created to visualize how eigenvalues change with different numbers of PCs.
+
+Eigenvalue Cutoff: A horizontal line is drawn at eigenvalue = 1. It suggests that we should only keep PCs with an eigenvalue greater than 1, as they add significant information.
+
+Determining Optimal Components: Iterate through the dictionary to find the maximum number of components where the last eigenvalue is greater than or equal to 1.
+
+Result: The optimal number of principal components is found, which represents the number of PCs that have significant eigenvalues (≥ 1).
+
+![alt text](image-1.png)
+
+![alt text](image-2.png)
+
+Based on the figure above, we can determine the optimal number of Principal Components is 5. This is the point at which the curve begins to flatten (elbow). After this point, adding more Principal Components does not contribute too much to increasing the explained variance ratio.
+
+3. **Question 3**: Compare the performance of **4** different classification algorithms (3 machine learning and 1 MLP models) in both formats above. (4 points)
+
+
+
+
+4. **Question 4**: Perform hyperparameter tuning using ```GridSearchCV``` for each classification method. (1 point)
+
+Best hyperparameter tuning using ```GridSearchCV``` for each classification method are:
+
+    LogisticRegression(C=0.1, max_iter=100),
+    SVC(C=0.1, gamma=0.01, kernel='rbf'),
+    GaussianNB(priors=None, var_smoothing=0.001),
+    MLPClassifier(alpha=0.01, max_iter=200)
+
+5. **Question 5**: Compare the performance of the different classification models using various metrics: accuracy, precision, recall, and F1-score.
+Based on the evaluation metrics, explain which model performs best and why. Identify the emotion category where the model makes the most accurate and most errors.
+
+Original data:
+![alt text](image-3.png)
+Transformed data:
+![alt text](image-5.png)
+
+Based on the table above, the GaussianNB model seems to perform best on transformed data.
+
+GaussianNB has a mean of 0.261939, which is the highest among the models listed, indicating good average performance.
+
+GaussianNB also has the lowest standard deviation (0.002131) among all models, suggesting it delivers the most consistent results across different runs or datasets.
+
+In conclusion, considering both accuracy (mean) and reliability (standard deviation), GaussianNB appears to offer the best balance of performance applying on transformed data.
+
+The emotion category where the model makes the most accurate is *Happy* and most errors is *Angry*.
+
+
