@@ -46,7 +46,8 @@ Feel free to modify and extend the notebook to explore further aspects of the da
 
 1. **Question 1**: Can you visualize the data projected onto two principal components? (2 points)
 
-![alt text](image.png)
+![image](https://github.com/Khatran05082003/Fundamental-ML/assets/102920168/c12e06f8-e339-496d-8a68-abd34d8b9ea2)
+
 
 2. **Question 2**: How to determine the optimal number of principal components using ```pca.explained_variance_```? Explain your selection process.
 
@@ -64,9 +65,11 @@ Determining Optimal Components: Iterate through the dictionary to find the maxim
 
 Result: The optimal number of principal components is found, which represents the number of PCs that have significant eigenvalues (≥ 1).
 
-![alt text](image-1.png)
+![image](https://github.com/Khatran05082003/Fundamental-ML/assets/102920168/ee88c71e-c9dc-43ad-9fcd-6fa0f91ecbf8)
 
-![alt text](image-2.png)
+
+![image](https://github.com/Khatran05082003/Fundamental-ML/assets/102920168/5c6c94e5-95d6-40ee-8be1-8690eb1330a3)
+
 
 Based on the figure above, we can determine the optimal number of Principal Components is 5. This is the point at which the curve begins to flatten (elbow). After this point, adding more Principal Components does not contribute too much to increasing the explained variance ratio.
 
@@ -88,9 +91,11 @@ Best hyperparameter tuning using ```GridSearchCV``` for each classification meth
 Based on the evaluation metrics, explain which model performs best and why. Identify the emotion category where the model makes the most accurate and most errors.
 
 Original data:
-![alt text](image-3.png)
+![image](https://github.com/Khatran05082003/Fundamental-ML/assets/102920168/0dcff04f-52e7-42e8-b3eb-5d14ffbcd72b)
+
 Transformed data:
-![alt text](image-5.png)
+![image](https://github.com/Khatran05082003/Fundamental-ML/assets/102920168/e4856999-48cc-4ccc-bb39-e9afe98700e2)
+
 
 Based on the table above, the GaussianNB model seems to perform best on transformed data.
 
